@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -30,22 +30,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td colspan="2">Larry the Bird</td>
-					<td>@twitter</td>
+				<tr th:each="index :${index}">
+					<th th:text="${index.Id}" scope="row"></th>
+					<td th:text="${index.dateId}"></td>
+					<td th:text="${index.dateName}"></td>
+					<td th:text="${index.result}"></td>
+					<td th:text="${index.edit}"></td>
 				</tr>
 			</tbody>
 		</table>
