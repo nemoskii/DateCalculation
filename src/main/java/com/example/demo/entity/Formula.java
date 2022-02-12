@@ -1,40 +1,20 @@
 package com.example.demo.entity;
 
 public class Formula {
-
-	// 自動採番No
-	private int id;
-	// 日付ID
-	private String dateId;
 	// 日付名
 	private String dateName;
-	// 計算結果
-	private String result;
-	// 編集
-	private String edit;
+	// 加減値（年）
+	private int formulaYear;
+	// 加減値（月）
+	private int formulaMonth;
+	// 加減値（日）
+	private int formulaDay;
 
-	public Formula(int id, String dateId, String dateName, String result) {
-		this.id = id;
-		this.dateId = dateId;
+	public Formula(String dateName, int formulaYear, int formulaMonth, int formulaDay) {
 		this.dateName = dateName;
-		this.result = result;
-
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getDateId() {
-		return dateId;
-	}
-
-	public void setDateId(String dateId) {
-		this.dateId = dateId;
+		this.formulaYear = formulaYear;
+		this.formulaYear = formulaMonth;
+		this.formulaYear = formulaDay;
 	}
 
 	public String getDateName() {
@@ -45,20 +25,28 @@ public class Formula {
 		this.dateName = dateName;
 	}
 
-	public String getResult() {
-		return result;
+	public int getFormulaYear() {
+		return formulaYear;
 	}
 
-	public void setResult(String result) {
-		this.result = result;
+	public void setFormulaYear(int formulaYear) {
+		this.formulaYear = formulaYear;
 	}
 
-	public String getEdit() {
-		return edit;
+	public int getFormulaMonth() {
+		return formulaMonth;
 	}
 
-	public void setEdit(String edit) {
-		this.edit = edit;
+	public void setFormulaMonth(int formulaMonth) {
+		this.formulaMonth = formulaMonth;
+	}
+
+	public int getFormulaDay() {
+		return formulaDay;
+	}
+
+	public void setFormulaDay(int formulaDay) {
+		this.formulaDay = formulaDay;
 	}
 
 }

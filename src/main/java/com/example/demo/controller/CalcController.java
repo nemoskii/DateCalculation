@@ -17,18 +17,18 @@ import com.example.demo.entity.Formula;
 @Controller
 public class CalcController {
 
-	@RequestMapping("/list")
+	@RequestMapping("/register")
 	public String list(Model model) {
 		List<Formula> index = new ArrayList<Formula>();
 
-		Formula oneYearAfter = new Formula(1, "010000", "１年後", "");
-		Formula oneYearBefore = new Formula(2, "010000", "１年前", "");
+		Formula oneYearAfter = new Formula("１年後", 1, 0, 0);
+		Formula oneMonthAfter = new Formula("１月後", 0, 1, 0);
 
 		index.add(oneYearAfter);
-		index.add(oneYearBefore);
+		index.add(oneMonthAfter);
 
 		model.addAttribute("index", index);
 
-		return "list";
+		return "register";
 	}
 }
