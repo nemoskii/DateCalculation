@@ -4,17 +4,17 @@ public class Formula {
 	// 日付名
 	private String dateName;
 	// 加減値（年）
-	private int formulaYear;
+	private int calcYear;
 	// 加減値（月）
-	private int formulaMonth;
+	private int calcMonth;
 	// 加減値（日）
-	private int formulaDay;
+	private int calcDay;
 
-	public Formula(String dateName, int formulaYear, int formulaMonth, int formulaDay) {
+	public Formula(String dateName, int calcYear, int calcMonth, int calcDay) {
 		this.dateName = dateName;
-		this.formulaYear = formulaYear;
-		this.formulaYear = formulaMonth;
-		this.formulaYear = formulaDay;
+		this.calcYear = calcYear;
+		this.calcYear = calcMonth;
+		this.calcYear = calcDay;
 	}
 
 	public String getDateName() {
@@ -26,27 +26,27 @@ public class Formula {
 	}
 
 	public int getFormulaYear() {
-		return formulaYear;
+		return calcYear;
 	}
 
 	public void setFormulaYear(int formulaYear) {
-		this.formulaYear = formulaYear;
+		this.calcYear = formulaYear;
 	}
 
 	public int getFormulaMonth() {
-		return formulaMonth;
+		return calcMonth;
 	}
 
 	public void setFormulaMonth(int formulaMonth) {
-		this.formulaMonth = formulaMonth;
+		this.calcMonth = formulaMonth;
 	}
 
 	public int getFormulaDay() {
-		return formulaDay;
+		return calcDay;
 	}
 
 	public void setFormulaDay(int formulaDay) {
-		this.formulaDay = formulaDay;
+		this.calcDay = formulaDay;
 	}
 
 }
