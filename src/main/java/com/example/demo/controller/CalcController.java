@@ -1,13 +1,11 @@
 package com.example.demo.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.domain.Formula;
+import com.example.demo.service.CalculationService;
 
 /**
  * 計算画面を制御するController
@@ -17,21 +15,24 @@ import com.example.demo.domain.Formula;
 @Controller
 public class CalcController {
 
-	@RequestMapping("/simulation")
-	public String list(Model model) {
+	@Autowired
+	CalculationService service;
 
-		List<Formula> formulas = new ArrayList<Formula>();
+	@RequestMapping("home")
+	public String getHome() {
 
-		Formula oneYearLater = new Formula("1年後", 1, 0, 0);
-		Formula twoMonthsLater = new Formula("2ヶ月後", 0, 2, 0);
-		Formula fifteenDaysLater = new Formula("15日後", 0, 0, 15);
+//	public String list(Model model) {
+//
+//		List<Formula> formulas = service.getFormulaList();
+//
+//		model.addAttribute("formulas", formulas); // thymeleafに渡す
 
-		formulas.add(fifteenDaysLater);
-		formulas.add(twoMonthsLater);
-		formulas.add(oneYearLater);
-
-		model.addAttribute("formulas", formulas); // thymeleafに渡す
-
-		return "simulation";
+		return "home";
 	}
+
+	@GetMapping("/register")
+	public String getRegister() {
+		return "register";
+	}
+
 }
