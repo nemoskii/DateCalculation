@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="UTF-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/user/signup.css}">
+
+ <script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+  <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+
+<title>計算結果</title>
+</head>
+<body>
+
+	<div class="mt-4 container">
+	<h5>計算の基準となる日付を入力してください。</h5>
+	
+	<form class="form-floating">
+  <input type="text" class="form-control" id="floatingInputValue" >
+  <label for="floatingInputValue">yyyy/MM/dd</label>
+</form>
+
+<button type="button" class="mt-2 btn btn-primary">計算</button>
+<button type="button" class="mt-2 btn btn-primary">新規登録</button>
+</div>
+
+
+</body>
+</html>

@@ -7,3 +7,6 @@ spring:
   sql:
     init:
       mode: always
+  messages:
+    basename: i18n/messages,i18n/ValidationMessages
+
