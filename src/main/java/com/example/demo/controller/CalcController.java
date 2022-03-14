@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import com.example.demo.service.CalculationService;
 public class CalcController {
 
 	@Autowired
+
 	CalculationService service;
 
 	@RequestMapping("home")
@@ -28,6 +30,7 @@ public class CalcController {
 //		model.addAttribute("formulas", formulas); // thymeleafに渡す
 
 		return "home";
+    
 	}
 
 	@GetMapping("/register")
